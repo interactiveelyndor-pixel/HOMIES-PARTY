@@ -1,0 +1,40 @@
+{
+  "name": "homies-party-backend",
+  "version": "1.0.0",
+  "description": "Backend foundation for Homies Party Board Games",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "migrate:up": "node-pg-migrate --envPath .env up",
+    "migrate:down": "node-pg-migrate --envPath .env down",
+    "test:guest": "tsx scripts/test-guest.ts",
+    "test:rooms": "tsx scripts/test-rooms.ts",
+    "test:realtime": "tsx scripts/test-realtime.ts",
+    "test:snl": "tsx scripts/test-snl.ts",
+    "test:games": "tsx scripts/test-games.ts",
+    "test:ludo": "tsx scripts/test-ludo.ts",
+    "test:matchmaking": "tsx scripts/test-matchmaking.ts",
+    "test:party": "tsx scripts/test-party.ts",
+    "test:wordbluff": "tsx scripts/test-wordbluff.ts",
+    "test:ratelimit": "tsx scripts/test-ratelimit.ts",
+    "test:integration": "tsx scripts/test-integration.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "firebase-admin": "^14.5.0",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/pg": "^8.11.11",
+    "node-pg-migrate": "^7.9.1",
+    "socket.io-client": "^4.8.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
